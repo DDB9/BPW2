@@ -5,7 +5,7 @@ using UnityEngine;
 public class playerMovement : MonoBehaviour {
 
 	public float movSpeed = 10;
-	public GameObject player;
+	public Rigidbody rigBod;
 	// Practice force on the gameobject to make it move.
 
 	// Use this for initialization
