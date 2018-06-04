@@ -19,7 +19,7 @@ public class playerController : MonoBehaviour {
 		player.velocity = new Vector3(0,0,movSpeed);
 
 		if (Input.GetMouseButtonDown(0)){
-			player.AddForce(new Vector3(0,1,0) * jumpForce * Time.deltaTime, ForceMode.Impulse);
+			player.AddForce(Vector3.up * 10f);
 		}
 	}
 }
