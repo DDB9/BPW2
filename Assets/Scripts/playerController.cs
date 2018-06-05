@@ -9,7 +9,6 @@ public class playerController : MonoBehaviour {
 	public float movSpeed = 10;
 	public float jumpForce = 5;
 	public Rigidbody player;
-	public bool isFalling = false;
 
 	// Use this for initialization
 	void Start () {
@@ -20,8 +19,9 @@ public class playerController : MonoBehaviour {
 	void Update () {
 		player.velocity = new Vector3(0,0,movSpeed); // Moves the player forward
 
-		if (Input.GetMouseButtonDown(0) && isFalling == false){
+		if (Input.GetMouseButtonDown(0)){
 			player.AddForce(0,jumpForce,0);
+			// Try to lerp the jump. Looks a little nicer.
 		}
 	}
 }
