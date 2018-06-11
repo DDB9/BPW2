@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class adSpawner : MonoBehaviour {
 
+
+	public int[] adSpawnpoints;
 	public GameObject adSpawnpoint1;
 	public GameObject adSpawnpoint2;
 	public GameObject adspawnPoint3;
@@ -19,13 +21,17 @@ public class adSpawner : MonoBehaviour {
 	public Sprite adProducts;
 
  	void Start(){
-		float x = Random.Range(minX, maxX);
-		float y = Random.Range(minY, maxY);
-		float z = Random.Range(minZ, maxZ);
+		 adSpawnpoints.Add(adSpawnpoint1);
 
 	}
  
 	void Update(){
-		Instantiate(adProducts, new Vector3(x,y,z), Quaternion.identity);
+		float x = Random.Range(minX, maxX);
+		float y = Random.Range(minY, maxY);
+		float z = Random.Range(minZ, maxZ);
+
+		if (Input.GetKey(KeyCode.Space)){
+			Instantiate(adProducts, new Vector3(x,y,z), Quaternion.identity);
+		}
  	}
 }
