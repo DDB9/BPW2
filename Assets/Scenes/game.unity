@@ -301,7 +301,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 116795762}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -3}
+  m_LocalPosition: {x: 0, y: 0, z: -2}
   m_LocalScale: {x: 0.9975347, y: 1.0042382, z: 1.0070455}
   m_Children: []
   m_Father: {fileID: 817581344}
@@ -605,6 +605,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3925968f2ee643a46917914f3b6b6392, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  adSpawnPoints: []
+  adSpawnpoint1: {x: -271, y: -18, z: 0}
+  adSpawnpoint2: {x: -53, y: 41, z: -3}
+  adSpawnpoint3: {x: 204, y: 41, z: -2}
+  adSpawnpoint4: {x: -120, y: -77, z: 3}
+  minX: 0
+  maxX: 10
+  minY: 0
+  maxY: 10
+  minZ: -3
+  maxZ: 0
+  adProducts: {fileID: 21300000, guid: 5c78b5cd8a1ea954ea4ca314523c5970, type: 3}
 --- !u!1 &1428924214
 GameObject:
   m_ObjectHideFlags: 0

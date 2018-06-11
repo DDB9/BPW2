@@ -8,7 +8,8 @@ public class gameManager : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other){
 		Instantiate(platform, platform.transform.position + Vector3.forward * 12, platform.transform.rotation);
-
 		Destroy(platform, 20f);
+	
+		adSpawner.adProductPosOne.SetActive(true);
 	}
 }
