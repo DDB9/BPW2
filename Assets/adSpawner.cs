@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class adSpawner : MonoBehaviour {
 
+	public static adSpawner instance = null;
+
 	public GameObject adProductPosOne;
 	public GameObject adProductPosTwo;
 
