@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class gameManager : MonoBehaviour {
 
+	public GameObject player;
 	public GameObject platform;
 	public Canvas playerScreen;
 
@@ -12,10 +13,18 @@ public class gameManager : MonoBehaviour {
 
 	private List<GameObject> adList = new List<GameObject>(2);
 	private GameObject spawnedAd;
+	private bool adActive = false;
+	private bool canJump = true;
 
 	void Start(){
 		adList.Add(adProductPosOne);
 		adList.Add(adProductPosTwo);
+	}
+
+	void Update(){
+		while (adActive == true){
+			player.GetComponent<playerController>().canJump = false;
+		}
 	}
 
 	void OnTriggerEnter(Collider other){
@@ -24,5 +33,6 @@ public class gameManager : MonoBehaviour {
 	
 		spawnedAd = adList[Random.Range(0, adList.Count)];
 		spawnedAd.SetActive(true);
+		adActive = true;
 	}
 }
