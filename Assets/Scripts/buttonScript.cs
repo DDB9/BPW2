@@ -9,7 +9,8 @@ public class buttonScript : MonoBehaviour {
 
 	public void exitAd(){
 		ad.SetActive(false);
-		player.GetComponent<playerController>().canJump = true;
+		gameManager.adActive = false;
+		playerController.canJump = true;
 
 	}
 }

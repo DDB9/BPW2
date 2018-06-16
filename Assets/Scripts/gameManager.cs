@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class gameManager : MonoBehaviour {
 
-	public GameObject player;
+	public static gameManager instance = null;
+
 	public GameObject platform;
 	public Canvas playerScreen;
 
@@ -12,27 +13,30 @@ public class gameManager : MonoBehaviour {
 	public GameObject adProductPosTwo;
 
 	private List<GameObject> adList = new List<GameObject>(2);
+	public static bool adActive = false;
 	private GameObject spawnedAd;
-	private bool adActive = false;
-	private bool canJump = true;
 
 	void Start(){
 		adList.Add(adProductPosOne);
 		adList.Add(adProductPosTwo);
 	}
 
-	void Update(){
-		while (adActive == true){
-			player.GetComponent<playerController>().canJump = false;
-		}
-	}
-
 	void OnTriggerEnter(Collider other){
-		Instantiate(platform, platform.transform.position + Vector3.forward * 12, platform.transform.rotation);
+		Instantiate(platform, 
+					platform.transform.position + Vector3.forward * 12, 
+					platform.transform.rotation);
+
 		Destroy(platform, 10f);
 	
 		spawnedAd = adList[Random.Range(0, adList.Count)];
 		spawnedAd.SetActive(true);
 		adActive = true;
+	}
+
+	IEnumerator jumpController(){
+		while (adActive == true){
+			playerController.canJump = false;
+		}
+		yield return new WaitForSeconds(0);
 	}
 }
