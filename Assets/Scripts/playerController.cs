@@ -10,7 +10,6 @@ public class playerController : MonoBehaviour {
 	public float jumpForce = 5;
 	public Rigidbody player;
 	public static bool canJump = true;
-	public int jumpTimer = 60;
 
 	// Use this for initialization
 	void Start () {
