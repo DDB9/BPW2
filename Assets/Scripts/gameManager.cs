@@ -6,6 +6,7 @@ public class gameManager : MonoBehaviour {
 
 	public static gameManager instance = null;
 
+	public Rigidbody player;
 	public GameObject platform;
 	public Canvas playerScreen;
 
@@ -21,6 +22,10 @@ public class gameManager : MonoBehaviour {
 		adList.Add(adProductPosTwo);
 	}
 
+	void Update(){
+		playerController.canJump = !adActive;
+	}
+
 	void OnTriggerEnter(Collider other){
 		Instantiate(platform, 
 					platform.transform.position + Vector3.forward * 12, 
@@ -31,12 +36,5 @@ public class gameManager : MonoBehaviour {
 		spawnedAd = adList[Random.Range(0, adList.Count)];
 		spawnedAd.SetActive(true);
 		adActive = true;
-	}
-
-	IEnumerator jumpController(){
-		while (adActive == true){
-			playerController.canJump = false;
-		}
-		yield return new WaitForSeconds(0);
 	}
 }
