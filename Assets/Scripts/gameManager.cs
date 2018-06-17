@@ -11,6 +11,8 @@ public class gameManager : MonoBehaviour {
 
 	public GameObject adProductPosOne;
 	public GameObject adProductPosTwo;
+	public GameObject adVirusPosOne;
+	public GameObject adVirusPosTwo;
 
 	private List<GameObject> adList = new List<GameObject>(2);
 	public static bool adActive = false;
@@ -19,6 +21,8 @@ public class gameManager : MonoBehaviour {
 	void Start(){
 		adList.Add(adProductPosOne);
 		adList.Add(adProductPosTwo);
+		adList.Add(adVirusPosOne);
+		adList.Add(adVirusPosTwo);
 	}
 
 	void OnTriggerEnter(Collider other){
