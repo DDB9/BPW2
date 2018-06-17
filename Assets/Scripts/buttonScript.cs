@@ -11,7 +11,5 @@ public class buttonScript : MonoBehaviour {
 		gameManager.adActive = false;
 		playerController.canJump = true;
 
-		Debug.Log("button");
-
 	}
 }
