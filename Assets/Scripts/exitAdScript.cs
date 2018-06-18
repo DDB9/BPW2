@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class buttonScript : MonoBehaviour {
+public class exitAdScript : MonoBehaviour {
 
 	public GameObject ad;
 
