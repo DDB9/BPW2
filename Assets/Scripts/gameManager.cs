@@ -9,6 +9,7 @@ public class gameManager : MonoBehaviour {
 	public Rigidbody player;
 	public GameObject platform;
 	public Canvas playerScreen;
+	public AudioClip adPlop;
 
 	public GameObject adProductPosOne;
 	public GameObject adProductPosTwo;
@@ -18,8 +19,11 @@ public class gameManager : MonoBehaviour {
 	private List<GameObject> adList = new List<GameObject>(2);
 	public static bool adActive = false;
 	private GameObject spawnedAd;
+	private AudioSource source;
 
 	void Start(){
+		source = GetComponent<AudioSource>();
+
 		adList.Add(adProductPosOne);
 		adList.Add(adProductPosTwo);
 		adList.Add(adVirusPosOne);
@@ -31,6 +35,9 @@ public class gameManager : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other){
+		source.PlayOneShot(adPlop, 1f);
+		source.pitch = Random.Range(0.5f, 1.0f);
+
 		Instantiate(platform, 
 					platform.transform.position + Vector3.forward * 12, 
 					platform.transform.rotation);
