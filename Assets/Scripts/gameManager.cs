@@ -24,10 +24,10 @@ public class gameManager : MonoBehaviour {
 	void Start(){
 		source = GetComponent<AudioSource>();
 
-		adList.Add(adProductPosOne);
-		adList.Add(adProductPosTwo);
-		adList.Add(adVirusPosOne);
-		adList.Add(adVirusPosTwo);
+		adList.Add(adProductPosOne); // }
+		adList.Add(adProductPosTwo); // } ALL OF
+		adList.Add(adVirusPosOne);	 // } THE ADS
+		adList.Add(adVirusPosTwo);	 // }
 	}
 
 	void Update(){
@@ -35,17 +35,17 @@ public class gameManager : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other){
-		source.PlayOneShot(adPlop, 1f);
-		source.pitch = Random.Range(0.5f, 1.0f);
+		source.PlayOneShot(adPlop, 1f); // Plays the plop sound when an ad appears on screen.
+		source.pitch = Random.Range(0.5f, 1.0f); // Randomizes the plop so it sounds different each time.
 
 		Instantiate(platform, 
-					platform.transform.position + Vector3.forward * 12, 
+					platform.transform.position + Vector3.forward * 12,  // Instantiates a new platform in front of the current.
 					platform.transform.rotation);
 
-		Destroy(platform, 10f);
+		Destroy(platform, 10f);	// Destroy the platform after 10 seconds.
 	
-		spawnedAd = adList[Random.Range(0, adList.Count)];
-		spawnedAd.SetActive(true);
-		adActive = true;
+		spawnedAd = adList[Random.Range(0, adList.Count)];	// Choose a random ad from the list...
+		spawnedAd.SetActive(true);	// ...And put it on the player's screen!
+		adActive = true; // Warning, ad has entered the building.
 	}
 }
