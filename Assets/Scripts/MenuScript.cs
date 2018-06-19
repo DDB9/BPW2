@@ -13,5 +13,8 @@ public class MenuScript : MonoBehaviour {
 		SceneManager.LoadScene(1);
 	}
 
+	public void mainMenu(){
+		SceneManager.LoadScene(0);
+	}
 	// Optional options menu here.
 }

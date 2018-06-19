@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class playerController : MonoBehaviour {
 
@@ -27,5 +28,9 @@ public class playerController : MonoBehaviour {
 			
 			// Try to lerp the jump. Looks a little nicer.
 		} 
+
+		if (Input.GetKeyDown(KeyCode.Escape)){
+			SceneManager.LoadScene(0);	// If the escape button is pushed, the menu comes up.
+		}
 	}
 }
