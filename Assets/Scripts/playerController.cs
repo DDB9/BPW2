@@ -21,13 +21,12 @@ public class playerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		player.velocity = new Vector3(0, 0, movSpeed); // Moves the player forward
+		player.velocity = new Vector3(0, player.velocity.y, movSpeed); // Moves the player forward
 
 		if (Input.GetMouseButtonDown(0) && canJump == true && isFalling == false){
-			player.AddForce(0, jumpForce, 0);
+			player.AddForce(0, jumpForce, 0, ForceMode.Impulse);
 			isFalling = true;
-			
-			// Try to lerp the jump. Looks a little nicer.
+			movSpeed = 5; // This is pretty shitty, fix it.
 		} 
 
 		if (Input.GetMouseButton(1) && canDuck == true){
@@ -37,7 +36,7 @@ public class playerController : MonoBehaviour {
 		}
 
 		if (Input.GetKeyDown(KeyCode.Escape)){
-			SceneManager.LoadScene(0);	// If the escape button is pushed, the menu comes up.
+			movSpeed = 0;	// If the escape button is pushed, the menu comes up.
 		}
 	}
 }
