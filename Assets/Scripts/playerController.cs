@@ -11,6 +11,7 @@ public class playerController : MonoBehaviour {
 	public float jumpForce = 5;
 	public Rigidbody player;
 	public static bool canJump = true;
+	public static bool canDuck = true;
 	public static bool isFalling = false;
 
 	// Use this for initialization
@@ -28,6 +29,12 @@ public class playerController : MonoBehaviour {
 			
 			// Try to lerp the jump. Looks a little nicer.
 		} 
+
+		if (Input.GetMouseButton(1) && canDuck == true){
+			player.transform.localScale = new Vector3(-0.6f, 0.4f, -0.6f); // If player presses the right mouse button, the player ducks.
+		} else {
+			player.transform.localScale = new Vector3(-0.6f, 0.6f, -0.6f); // Otherwise it keeps it's original size.
+		}
 
 		if (Input.GetKeyDown(KeyCode.Escape)){
 			SceneManager.LoadScene(0);	// If the escape button is pushed, the menu comes up.

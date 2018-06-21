@@ -32,6 +32,7 @@ public class gameManager : MonoBehaviour {
 
 	void Update(){
 		playerController.canJump = !adActive;
+		playerController.canDuck = !adActive;
 	}
 
 	void OnTriggerEnter(Collider other){
