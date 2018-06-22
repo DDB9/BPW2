@@ -8,5 +8,6 @@ public class buttonScript : MonoBehaviour {
 
 	public void exitAd(){
 		ad.SetActive(false);
+		gameManager.adActive = false;
 	}
 }

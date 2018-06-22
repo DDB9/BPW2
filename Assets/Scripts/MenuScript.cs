@@ -11,10 +11,12 @@ public class MenuScript : MonoBehaviour {
 
 	public void startGame(){ // Starts the game.
 		SceneManager.LoadScene(1);
+		gameManager.adActive = false;
 	}
 
 	public void mainMenu(){
 		SceneManager.LoadScene(0);
+		gameManager.adActive = false;
 	}
 	// Optional options menu here.
 }
