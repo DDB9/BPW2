@@ -39,10 +39,6 @@ public class gameManager : MonoBehaviour {
 		source.PlayOneShot(adPlop, 1f); // Plays the plop sound when an ad appears on screen.
 		source.pitch = Random.Range(0.5f, 1.0f); // Randomizes the plop so it sounds different each time.
 
-		Instantiate(platform, 
-					platform.transform.position + Vector3.forward * 12,  // Instantiates a new platform in front of the current.
-					platform.transform.rotation);
-
 		Destroy(platform, 10f);	// Destroy the platform after 10 seconds.
 	
 		spawnedAd = adList[Random.Range(0, adList.Count)];	// Choose a random ad from the list...
