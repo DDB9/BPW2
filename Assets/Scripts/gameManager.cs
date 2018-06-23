@@ -7,7 +7,6 @@ public class gameManager : MonoBehaviour {
 	public static gameManager instance = null;
 
 	public Rigidbody player;
-	public GameObject platform;
 	public Canvas playerScreen;
 	public AudioClip adPlop;
 
@@ -38,8 +37,6 @@ public class gameManager : MonoBehaviour {
 	void OnTriggerEnter(Collider other){
 		source.PlayOneShot(adPlop, 1f); // Plays the plop sound when an ad appears on screen.
 		source.pitch = Random.Range(0.5f, 1.0f); // Randomizes the plop so it sounds different each time.
-
-		Destroy(platform, 10f);	// Destroy the platform after 10 seconds.
 	
 		spawnedAd = adList[Random.Range(0, adList.Count)];	// Choose a random ad from the list...
 		spawnedAd.SetActive(true);	// ...And put it on the player's screen!
