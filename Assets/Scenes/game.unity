@@ -89,7 +89,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
-  m_LightingDataAsset: {fileID: 112000018, guid: cb74f917e396006488f311b7e913b023,
+  m_LightingDataAsset: {fileID: 112000078, guid: cb74f917e396006488f311b7e913b023,
     type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -5356,7 +5356,7 @@ Transform:
   m_LocalScale: {x: 1.8976623, y: 1.4406691, z: 1}
   m_Children: []
   m_Father: {fileID: 1931963265}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1282533173
 Animator:

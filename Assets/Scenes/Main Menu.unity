@@ -660,6 +660,7 @@ RectTransform:
   - {fileID: 830528821}
   - {fileID: 266972132}
   - {fileID: 1478869388}
+  - {fileID: 783098336}
   m_Father: {fileID: 1730258859}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -861,7 +862,7 @@ GameObject:
   - component: {fileID: 538926823}
   - component: {fileID: 538926822}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Stripe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -873,16 +874,16 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 538926820}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.2664685, y: 0.04575495, z: 1}
   m_Children: []
-  m_Father: {fileID: 1730258859}
-  m_RootOrder: 2
+  m_Father: {fileID: 783098336}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 376, y: 97}
+  m_AnchoredPosition: {x: -42, y: -6}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &538926822
@@ -1300,7 +1301,7 @@ GameObject:
   - component: {fileID: 783098338}
   - component: {fileID: 783098337}
   m_Layer: 5
-  m_Name: TextMeshPro Text
+  m_Name: Credits
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1312,18 +1313,19 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 783098335}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1730258859}
-  m_RootOrder: 1
+  m_Children:
+  - {fileID: 538926821}
+  m_Father: {fileID: 346403388}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 418, y: 103}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 1318, y: 600}
   m_SizeDelta: {x: 200, y: 50}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 0}
 --- !u!114 &783098337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1408,7 +1410,7 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -295.03394, w: -96.908936}
+  m_margin: {x: 0, y: 0, z: -149.76587, w: -73.288086}
   m_textInfo:
     textComponent: {fileID: 783098337}
     characterCount: 30
@@ -3171,8 +3173,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 346403388}
-  - {fileID: 783098336}
-  - {fileID: 538926821}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
