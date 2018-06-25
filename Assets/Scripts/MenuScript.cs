@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class MenuScript : MonoBehaviour {
 
+	public GameObject menuMain;
+	public GameObject menuInstructions;
+
 	public void exitGame(){ // Quits the game.
 		Application.Quit();
 	}
@@ -18,5 +21,14 @@ public class MenuScript : MonoBehaviour {
 		SceneManager.LoadScene(0);
 		gameManager.adActive = false;
 	}
-	// Optional options menu here.
+	
+	public void toInstructions(){
+		menuMain.SetActive(false);
+		menuInstructions.SetActive(true);
+	}
+	
+	public void toMainMenu(){
+		menuMain.SetActive(true);
+		menuInstructions.SetActive(false);
+	}
 }
