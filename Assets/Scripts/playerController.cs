@@ -36,7 +36,7 @@ public class playerController : MonoBehaviour {
 		}
 
 		if (Input.GetKeyDown(KeyCode.Escape)){
-			movSpeed = 0;	// If the escape button is pushed, the menu comes up.
+			Application.Quit();	// If the escape button is pushed, the menu comes up.
 		}
 	}
 }
